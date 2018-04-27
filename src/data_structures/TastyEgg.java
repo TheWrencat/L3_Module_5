@@ -1,16 +1,27 @@
 package data_structures;
+
 import java.util.Random;
 
 public class TastyEgg {
+	public static void main(String[] args) {
+		KinderSurprise myKinderSurprise = new KinderSurprise(new Egg(new Toy())); // Your mission: Find out what toy is
+																					// inside your KinderSurprise.
+		Egg myEgg = myKinderSurprise.getKinderSurpriseContents();
+		Toy myToy = myEgg.getEggContents();
+		String theToy = myToy.getToyName();
+		System.out.println(theToy);
+	}
+}
+
+class KinderSurprise {
 	private Egg egg;
 
-	public TastyEgg(Egg egg) {
+	public KinderSurprise(Egg egg) {
 		this.egg = egg;
 	}
 
-	Egg getKinderSurpriseContents() { 
-		// ADD CODE HERE
-		
+	Egg getKinderSurpriseContents() {
+		return egg;
 	}
 }
 
@@ -22,8 +33,7 @@ class Egg {
 	}
 
 	Toy getEggContents() {
-		// ADD CODE HERE
-		
+		return toy;
 	}
 }
 
@@ -32,7 +42,9 @@ class Toy {
 		int randomToySelector = new Random().nextInt(2);
 		if (randomToySelector == 0)
 			return "play doh";
-		else 
+		else if (randomToySelector == 1)
 			return "train";
+		else
+			return "spongebob";
 	}
 }
