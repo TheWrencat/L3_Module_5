@@ -8,6 +8,7 @@ public class ListIterationMaster {
 		for (int i = 0; i < CD.size(); i++) {
 			CD.get(i).getDuration();
 		}
+		// ----
 		ArrayList<Student> classmates = new ArrayList<Student>();
 		Student a = new Student();
 		classmates.add(a);
@@ -39,6 +40,15 @@ public class ListIterationMaster {
 		} else if (tallyBr > tallyBl) {
 			System.out.println("the most popular eye color is brown");
 		}
+		// ----
+		ArrayList<Pencil> pencilCase = new ArrayList<Pencil>();
+		int p = 0;
+		for (int i = 0; i < pencilCase.size(); i++) {
+			if (pencilCase.get(i).isBlunt()) {
+				p++;
+			}
+		}
+		System.out.println("You need to sharpen " + p + " pencils");
 
 	}
 
@@ -64,14 +74,13 @@ public class ListIterationMaster {
 		}
 	}
 
-	// 3. On ​paper​, calculate how many pencils need to be sharpened
+	// 3. calculate how many pencils need to be sharpened
 	class Pencil {
 		boolean isBlunt() {
 			return false;
 
 		}
 
-		ArrayList<Pencil> pencilCase;
 	}
 
 	public static void main(String[] args) {
