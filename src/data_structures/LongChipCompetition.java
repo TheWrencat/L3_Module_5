@@ -7,12 +7,17 @@ public class LongChipCompetition {
 	LongChipCompetition() {
 		initializeBeatles();
 		double LongestChip = 0;
+		String winningBeatle = "";
 		for (int i = 0; i < theBeatles.size(); i++) {
 			Beatle b = theBeatles.get(i);
 			for (int j = 0; j < b.getChips().size(); j++) {
-
+				if(LongestChip < b.getChips().get(j).length) {
+					LongestChip = b.getChips().get(j).length;
+					winningBeatle = b.getName();
+				}
 			}
 		}
+		System.out.println("The winning Beatle is "+winningBeatle+", with a chip that is "+LongestChip+" long");
 
 	}
 
