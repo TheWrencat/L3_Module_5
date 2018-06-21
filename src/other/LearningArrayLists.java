@@ -22,24 +22,55 @@ public class LearningArrayLists {
 	}
 
 	public static String iterateOver(ArrayList testList) {
-		
-		return null;
+		String iterate = "";
+		String current = "";
+		for (int i = 0; i < testList.size(); i++) {
+			current = (String) testList.get(i);
+			iterate += current;
+		}
+		return iterate;
 	}
 
-	public static Object findItemOnList(ArrayList testList, String string) {
-		// TODO Auto-generated method stub
-		return null;
+	public static int findItemOnList(ArrayList testList, String string) {
+		int correctItem = 0;
+		String currentItem = "";
+		for (int j = 0; j < testList.size(); j++) {
+			currentItem = (String) testList.get(j);
+			if (currentItem.equals(string)) {
+				correctItem = j;
+				break;
+			}
+		}
+		return correctItem;
+	}
+
+	public static void replaceItem(ArrayList testList, int i, String string) {
+		testList.set(i, string);
+	}
+
+	public static void insertItem(ArrayList testList, int i, String string) {
+		testList.add(i, string);
 	}
 
 	public static Object addAllInteger(ArrayList<Integer> testList) {
-		// TODO Auto-generated method stub
-		return null;
+		int total = 0;
+		int current = 0;
+		for (int i = 0; i < testList.size(); i++) {
+			current = testList.get(i);
+			total += current;
+		}
+		return total;
 	}
 
 	public static String addAllString(ArrayList<String> testList) {
-		// TODO Auto-generated method stub
-		return null;
+		String all = "";
+		String current = "";
+		for (int i = 0; i < testList.size(); i++) {
+			current = (String) testList.get(i);
+			all += current;
+		}
+
+		return all;
 	}
 
-	
 }

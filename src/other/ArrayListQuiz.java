@@ -2,6 +2,7 @@ package other;
 
 // Copyright Wintriss Technical Schools 2013
 import java.util.ArrayList;
+
 import junit.framework.TestCase;
 
 /* Use the internets to figure out how to use ArrayLists. Try not to use autocomplete. */
@@ -54,11 +55,12 @@ public class ArrayListQuiz extends TestCase {
 		testList.add("rad");
 		testList.add("natch");
 		testList.add("bounce");
-	}LearningArrayLists.replaceItem(testList,1,"sweet");
+		LearningArrayLists.replaceItem(testList, 1, "sweet");
 
-assertEquals("rad", testList.get(0));
-assertEquals("sweet", testList.get(1));
-assertEquals("bounce", testList.get(2));
+		assertEquals("rad", testList.get(0));
+		assertEquals("sweet", testList.get(1));
+		assertEquals("bounce", testList.get(2));
+	}
 
 	public void testInsertItem() throws Exception {
 		ArrayList testList = new ArrayList();
