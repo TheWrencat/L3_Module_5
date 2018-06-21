@@ -74,3 +74,6 @@ public class LearningArrayLists {
 	}
 
 }
+// 10, 13, 15, 20, 21, 22, 23, 26, 28, 29, 30
+// is alphanumeric, filewriter.write, adding data to an existing file,
+// extends/impliments, preformAction, abstract classes, threads
